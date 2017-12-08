@@ -1,0 +1,23 @@
+{% extends 'homepage/base.html' %}
+
+{% block content %}
+{% load staticfiles %}
+
+<div class="container text-center">
+    <h1>Welcome to Samuel's Blog</h1>
+</div>
+
+<div class="container text-center">
+    <div class="row">
+        <div class="col-lg-12">
+            <div id="post">
+                {%for post in object_list %}
+                    <h5>{{ post.date|date:"Y-m-d" }}&nbsp&nbsp&nbsp&nbsp&nbsp<a href="/sammy_blog/{{ post.id }}">{{ post.title }}</a></h5>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+</div>
+
+
+{% endblock %}
