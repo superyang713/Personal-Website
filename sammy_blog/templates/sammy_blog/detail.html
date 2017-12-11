@@ -4,16 +4,9 @@
 {% load staticfiles %}
 
 <div id="content">
-    <h3>{{ post.title }}</h3>
-    <h6>on {{ post.date }}</h6>
-    {{ post.body|safe|linebreaks }}
-    {% if post.image %}
-        <img src="{{ post.image.url }}">
-    {% endif %}
+    <h1>{{ post.title }}</h1>
+    <h6>{{ post.date }}</h6>
+    {{ post.content|safe|linebreaks }}
 </div>
-
-
-
-
 
 {% endblock %}

@@ -8,6 +8,7 @@ urlpatterns = [
     url(r'^resume/', include('resume.urls')),
     url(r'^', include('homepage.urls')),
     url(r'^sammy_blog/', include('sammy_blog.urls')),
+    url(r'^tinymce/', include('tinymce.urls')),
 ]
 
 
