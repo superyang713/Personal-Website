@@ -1,0 +1,18 @@
+{% extends 'homepage/base.html' %}
+{% block content %}
+{% load staticfiles %}
+
+<div class="jumbotron text-center">
+    <h1>Instrument Design with AutoCAD</h1>
+</div>
+
+<div class="paragraph">
+    <p>
+    During the first year of my Ph.D study, I was assigned a challenging tast,
+    which was to design a cluster deposition source. This cluster deposition system
+    has also to be able to attached to an existing VG Scientific MK-II surface
+    analysis instrument. The whole thing eventually looks like this:
+    </p>
+    <img class="img-responsive" src="{% static 'homepage/images/instrument_overview.png' %}">
+<div>
+{% endblock %}

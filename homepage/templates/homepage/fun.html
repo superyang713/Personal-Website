@@ -1,20 +1,38 @@
 {% extends 'homepage/base.html' %}
+
+{% block top_image %}
+{% load staticfiles %}
+    <header class="masthead" style="background-image: url('{% static 'homepage/images/pic7.jpg' %}')">
+{% endblock %}
+
 {% block content %}
 {% load staticfiles %}
 
 <div class="container text-center">
     <div class="row">
         <div class="col-sm-4">
-            <a href="{%url 'sammy_blog:index'%}"><img src="{% static 'homepage/images/fun_sammy.jpg' %}"></a>
-            <a href="{%url 'sammy_blog:index'%}"><h4>Sammy's Blog</h4></a>
+            <a href="{%url 'sammy_blog:index'%}">
+                <img class="img-fluid" src="{% static 'homepage/images/fun_sammy.jpg' %}">
+            </a>
+            <a href="{%url 'sammy_blog:index'%}">
+                <h4>Sammy's Blog</h4>
+            </a>
         </div>
         <div class="col-sm-4">
-            <a href="#"><img src="{% static 'homepage/images/fun_beer.jpg' %}"></a>
-            <a href="#"><h4>Yang's Brewery</h4></a>
+            <a href="{%url 'brew_blog:index'%}">
+                <img class="img-fluid" src="{% static 'homepage/images/fun_beer.jpg' %}">
+            </a>
+            <a href="{%url 'brew_blog:index'%}">
+                <h4>Yang's Brewery</h4>
+            </a>
         </div>
         <div class="col-sm-4">
-            <a href="#"><img src="{% static 'homepage/images/fun_coding.jpg' %}"></a>
-            <a href="#"><h4>Road to be a great Pythoneer</h4></a>
+            <a href="https://github.com/superyang713">
+                <img class="img-fluid" src="{% static 'homepage/images/fun_coding.jpg' %}">
+            </a>
+            <a href="https://github.com/superyang713">
+                <h4>Road to be a great Pythoneer</h4>
+            </a>
         </div>
     </div>
 </div>

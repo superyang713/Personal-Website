@@ -35,6 +35,7 @@ INSTALLED_APPS = [
     'resume',
     'homepage',
     'sammy_blog',
+    'brew_blog',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',

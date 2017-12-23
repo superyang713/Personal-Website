@@ -1,26 +1,48 @@
 {% extends 'homepage/base.html' %}
+
+{% block top_image %}
+{% load staticfiles %}
+    <header class="masthead" style="background-image: url('{% static 'homepage/images/pic3.jpg' %}')">
+{% endblock %}
+
 {% block content %}
 {% load staticfiles %}
 
 <div class="container text-center">
     <div class="row">
-        <div class="col-lg-6">
-            <a href="#"><img src="{% static 'homepage/images/project_instrumentdesign.png' %}"></a>
-            <a href="#"><h4>Instrument Design with CAD tools</h4></a>
+        <div class="col-md-6">
+            <a href="{% url 'homepage:instrument_design' %}">
+                <img class="img-responsive" src="{% static 'homepage/images/project_instrumentdesign.png' %}">
+            </a>
+            <a href="{% url 'homepage:instrument_design' %}">
+                <h4>Instrument Design with CAD tools</h4>
+            </a>
         </div>
-        <div class="col-lg-6">
-            <a href="#"><img src="{% static 'homepage/images/project_cluster.jpg' %}"></a>
-            <a href="#"><h4>Size-Selected Cluster Deposition System </h4></a>
+        <div class="col-md-6">
+            <a href="{% url 'homepage:cluster_deposition' %}">
+                <img class="img-responsive" src="{% static 'homepage/images/project_cluster.jpg' %}">
+            </a>
+            <a href="{% url 'homepage:cluster_deposition' %}">
+                <h4>Size-Selected Cluster Deposition System </h4>
+            </a>
         </div>
     </div>
     <div class="row">
-        <div class="col-lg-6">
-            <a href="#"><img src="{% static 'homepage/images/project_littlemachine.jpg' %}"></a>
-            <a href="#"><h4>Molecular Beam System </h4></a>
+        <div class="col-md-6">
+            <a href="{% url 'homepage:molecular_beam' %}">
+                <img class="img-responsive" src="{% static 'homepage/images/project_littlemachine.jpg' %}">
+            </a>
+            <a href="{% url 'homepage:molecular_beam' %}">
+                <h4>Molecular Beam System </h4>
+            </a>
         </div>
-        <div class="col-lg-6">
-            <a href="#"><img src="{% static 'homepage/images/project_result.png' %}"></a>
-            <a href="#"><h4>Some Results of the Research</h4></a>
+        <div class="col-md-6">
+            <a href="{% url 'homepage:results' %}">
+                <img src="{% static 'homepage/images/project_result.png' %}">
+            </a>
+            <a href="{% url 'homepage:results' %}">
+                <h4>Some Results of the Research</h4>
+            </a>
         </div>
     </div>
 </div>

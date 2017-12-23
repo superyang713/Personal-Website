@@ -1,8 +1,7 @@
 .navbar {
     margin-bottom: 0;
     border-radius: 0;
-    background-color: black;
-    color: black;
+    background-color: #68636F;
     padding: 0.5% 0;
     font-size: 1.5em;
     border: 0;
@@ -42,10 +41,11 @@
 .container{
     margin: 4% auto;
     }
-    footer{
+
+footer {
     width: 100%;
-    background-color: #5E4485;
-    padding: 5%;
+    background-color: #68636F;
+    padding: 1%;
     color: #FFF;
     }
 
@@ -90,5 +90,17 @@ h4 {
 #content {
     margin: 4%;
     padding: 9px 15px 5px;
-    }
+}
 
+.img-responsive {
+    margin: 0 auto;
+}
+
+.image-3-col {
+    height: 30%;
+    width: 30%;
+}
+
+.paragraph {
+    margin: 50px 50px 10px;
+}

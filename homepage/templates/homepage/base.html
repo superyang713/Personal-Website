@@ -1,42 +1,73 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <title>Yang Dai</title>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-    {% load staticfiles %}
-    <link rel="icon" href="{% static '/homepage/favicon.ico' %}">
-    <link rel="stylesheet" type="text/css" href="{% static 'homepage/style.css' %}"/>
 
-</head>
-<body>
-<nav class="navbar navbar-inverse">
-    <div class="container-fluid">
-        <div class="navbar-header">
-            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavBar">
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-            </button>
-            <a class="navbar-brand" href="{% url 'homepage:index' %}">Yang Dai</a>
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Yang Dai - Chemist, Programming Enthusiast</title>
+     {% load staticfiles  %}
+    <!-- Bootstrap core CSS -->
+    <link href="{% static 'homepage/vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
+
+    <!-- Custom fonts for this template -->
+    <link href="{% static 'homepage/vendor/font-awesome/css/font-awesome.min.css' %}" rel="stylesheet" type="text/css">
+    <link href='https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+
+    <!-- Custom styles for this template -->
+    <link href="{% static 'homepage/css/clean-blog.css' %}" rel="stylesheet">
+
+  </head>
+
+  <body>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
+      <div class="container">
+        <a class="navbar-brand" href="{% url 'homepage:index' %}">Yang Dai</a>
+        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+          Menu
+          <i class="fa fa-bars"></i>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="{% url 'homepage:index' %}">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="{% url 'resume:index' %}">Resume</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="{% url 'homepage:projects' %}">Projects</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="{% url 'homepage:fun' %}">Fun</a>
+            </li>
+          </ul>
         </div>
-        <div class="collapse navbar-collapse" id="myNavBar">
-            <ul class="nav navbar-nav navbar-right">
-                {% url 'homepage:index' as url_home %}
-                {% url 'homepage:fun' as url_fun %}
-                {% url 'homepage:projects' as url_projects %}
-                <li {% if request.path == url_home %} class="active"{% endif %}><a href="{{ url_home }}">Home</a></li>
-                <li><a href="{% url 'resume:index' %}">Resume</a></li>
-                <li {% if request.path == url_projects %} class="active"{% endif %}><a href="{{ url_projects }}">Projects</a></li>
-                <li {% if request.path == url_fun %} class="active"{% endif %}><a href="{{ url_fun }}">Fun</a></li>
-            </ul>
+      </div>
+    </nav>
+
+    <!-- Page Header -->
+{% block top_image %}
+    <header class="masthead" style="background-image: url('{% static 'homepage/images/pic5.jpg' %}')">
+{% endblock %}
+      <div class="overlay"></div>
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 col-md-10 mx-auto">
+            <div class="site-heading">
+                <h1>Hello World,<br> I'm Yang Dai.</h1>
+              <span class="subheading">Chemist, Programmer, Brewer</span>
+            </div>
+          </div>
         </div>
-    </div>
-</nav>
+      </div>
+    </header>
 
 {% block content %}
 {% endblock %}
@@ -62,5 +93,14 @@
     </div>
 </footer>
 
-</body>
+
+    <!-- Bootstrap core JavaScript -->
+    <script src="{% static 'homepage/vendor/jquery/jquery.min.js' %}"></script>
+    <script src="{% static 'homepage/vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+
+    <!-- Custom scripts for this template -->
+    <script src="{% static 'homepage/js/clean-blog.min.js' %}"></script>
+
+  </body>
+
 </html>
