@@ -1,44 +1,160 @@
-{% extends 'homepage/base.html' %}
+<!DOCTYPE HTML>
+<html>
+<head>
+    <title>Yang Dai - Chemist, Programming Enthusiast</title>
+    {% load staticfiles %}
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link href="{% static 'homepage/assets/css/main.css' %}" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+        <header id="header" class="alt">
+            <div class="logo">
+                <a href="#">MIT <span>SURFACE SCIENCE AND MACHINE LEARNING</span></a>
+            </div>
+            <a href="#menu">Menu</a>
+        </header>
+
+    <!-- Nav -->
+        <nav id="menu">
+            <ul class="links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="generic.html">Generic</a></li>
+                <li><a href="elements.html">Elements</a></li>
+            </ul>
+        </nav>
+
+    <!-- Banner -->
+        <section class="banner full">
+            <article>
+                <img src="{% static 'homepage/images/slide04.jpg' %}" alt="" />
+                <div class="inner">
+                    <header>
+                        <p>Surface Chemistry, Data Science, Homebrewing</p>
+                        <h2>Yang Dai</h2>
+                    </header>
+                </div>
+            </article>
+        <!-- <article>
+        <!--     <img src="{% static 'homepage/images/slide05.jpg' %}"  alt="" />
+        <!--     <div class="inner">
+        <!--         <header>
+        <!--             <p>Ipsum dolor sed magna veroeros lorem ipsum</p>
+        <!--             <h2>Lorem adipiscing</h2>
+        <!--         </header>
+        <!--     </div>
+        <!-- </article> -->
+        </section>
+
+    <!-- One -->
+        <section id="one" class="wrapper style2">
+            <div class="inner">
+                <div class="grid-style">
+
+                    <div>
+                        <div class="box">
+                            <div class="image fit">
+                                <img src="{% static 'homepage/images/pic02.jpg' %}" alt="" />
+                            </div>
+                            <div class="content">
+                                <header class="align-center">
+                                    <p>maecenas sapien feugiat ex purus</p>
+                                    <h2>Lorem ipsum dolor</h2>
+                                </header>
+                                <p> Cras aliquet urna ut sapien tincidunt, quis malesuada elit facilisis. Vestibulum sit amet tortor velit. Nam elementum nibh a libero pharetra elementum. Maecenas feugiat ex purus, quis volutpat lacus placerat malesuada.</p>
+                                <footer class="align-center">
+                                    <a href="#" class="button alt">Learn More</a>
+                                </footer>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div>
+                        <div class="box">
+                            <div class="image fit">
+                                <img src="{% static 'homepage/images/pic03.jpg' %}" alt="" />
+                            </div>
+                            <div class="content">
+                                <header class="align-center">
+                                    <p>mattis elementum sapien pretium tellus</p>
+                                    <h2>Vestibulum sit amet</h2>
+                                </header>
+                                <p> Cras aliquet urna ut sapien tincidunt, quis malesuada elit facilisis. Vestibulum sit amet tortor velit. Nam elementum nibh a libero pharetra elementum. Maecenas feugiat ex purus, quis volutpat lacus placerat malesuada.</p>
+                                <footer class="align-center">
+                                    <a href="#" class="button alt">Learn More</a>
+                                </footer>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+    <!-- Two -->
+        <section id="two" class="wrapper style3">
+            <div class="inner">
+                <header class="align-center">
+                    <p>Nam vel ante sit amet libero scelerisque facilisis eleifend vitae urna</p>
+                    <h2>Morbi maximus justo</h2>
+                </header>
+            </div>
+        </section>
+
+    <!-- Three -->
+        <section id="three" class="wrapper style2">
+            <div class="inner">
+                <header class="align-center">
+                    <p class="special">Nam vel ante sit amet libero scelerisque facilisis eleifend vitae urna</p>
+                    <h2>Morbi maximus justo</h2>
+                </header>
+                <div class="gallery">
+                    <div>
+                        <div class="image fit">
+                            <a href="#"><img src="{% static 'homepage/images/pic01.jpg' %}" alt="" /></a>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="image fit">
+                            <a href="#"><img src="{% static 'homepage/images/pic02.jpg' %}" alt="" /></a>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="image fit">
+                            <a href="#"><img src="{% static 'homepage/images/pic03.jpg' %}" alt="" /></a>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="image fit">
+                            <a href="#"><img src="{% static 'homepage/images/pic04.jpg' %}" alt="" /></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
 
 
-{% block content %}
-{% load staticfiles %}
+    <!-- Footer -->
+        <footer id="footer">
+            <div class="container">
+                <ul class="icons">
+                    <li><a href="#" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
+                    <li><a href="#" class="icon fa-facebook"><span class="label">Facebook</span></a></li>
+                    <li><a href="#" class="icon fa-instagram"><span class="label">Instagram</span></a></li>
+                    <li><a href="#" class="icon fa-envelope-o"><span class="label">Email</span></a></li>
+                </ul>
+            </div>
+            <div class="copyright">
+                &copy; Untitled. All rights reserved.
+            </div>
+        </footer>
 
-<div class="container text-center">
-    <h1>---Here's What I've Done So Far---</h1>
-    <div class="row">
-        <div class="col-md-6">
-            <img src="{% static 'homepage/images/project_instrumentdesign.png' %}" class="img-fluid">
-        </div>
-        <div class="col-md-6">
-            <p>I have designed a surface science instrument capable of
-            depositing size-selected metal clusters on substrates in ultra-high
-            vacuum, atomic layer deposition, as well as in situ analysis of the
-            as-deposited samples via XPS and TPD.</p>
-        </div>
-    </div>
-</div>
-
-<div class="container">
-    <div class="spacing">
-    <div class="row">
-        <div class="col-md-6">
-            <p>I was born in Northeast China, right on the border between China
-            and North Korea. For some reason, I found myself zig-zagging in a
-            easterly direction, finishing my high school in Northeast China,
-            and across the Pacific, I got my B.S. from Cal State, East Bay
-            in California. I migrated on to graduate school at Utah, completing
-            a Ph.D. with Scott L. Anserson in 2016, then I joined Sylvia T.
-            Ceyer's lab as a postdoc at MIT in 2017.</p>
-            <p>Apart from my research in the field of surface chemistry, I also
-            enjoy brewing beer, and learning some cool stuff about Python, or
-            computer programming in general. I have to say, it is a good time
-            now to be a computer programmer.</p>
-        </div>
-        <div class="col-md-6">
-            <img class="img-fluid" src="{% static 'homepage/images/pic4.jpg' %}">
-        </div>
-    </div>
-    </div>
-</div>
-{% endblock %}
+    <!-- Scripts -->
+        <script src="{% static 'homepage/assets/js/jquery.min.js' %}"></script>
+        <script src="{% static 'homepage/assets/js/jquery.scrollex.min.js' %}"></script>
+        <script src="{% static 'homepage/assets/js/skel.min.js' %}"></script>
+        <script src="{% static 'homepage/assets/js/util.js' %}"></script>
+        <script src="{% static 'homepage/assets/js/main.js' %}"></script>
+</body>
+</html>
