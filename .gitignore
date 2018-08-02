@@ -3,5 +3,10 @@
 .pytest_cache
 __pycache__
 .DS_Store
-/mywebsite/settings.py
-
+.env
+QR.png
+wechat_api.pyc
+geckodriver.log
+build/
+dist/
+static/
